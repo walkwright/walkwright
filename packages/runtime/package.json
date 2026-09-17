@@ -1,0 +1,53 @@
+{
+  "name": "walkwright",
+  "version": "1.0.0-pre.13",
+  "type": "module",
+  "description": "Walkwright runtime: walk your app with Playwright and record a browsable report",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/walkwright/walkwright.git",
+    "directory": "packages/runtime"
+  },
+  "homepage": "https://github.com/walkwright/walkwright#readme",
+  "bugs": {
+    "url": "https://github.com/walkwright/walkwright/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "walkwright": "./bin/walkwright.js"
+  },
+  "exports": {
+    "./*": {
+      "walkwright:source": "./src/*.ts",
+      "types": "./build/*.d.ts",
+      "default": "./build/*.js"
+    }
+  },
+  "files": [
+    "bin/walkwright.js",
+    "build/**/*.d.ts",
+    "build/**/*.js",
+    "build/**/*.js.map",
+    "src/**/*.ts"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "prepublishOnly": "pnpm run build",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "peerDependencies": {
+    "@playwright/test": ">=1.55.0",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.1",
+    "@types/node": "24.13.3",
+    "tsup": "8.5.1",
+    "typescript": "5.9.3",
+    "zod": "4.4.3"
+  },
+  "sideEffects": false
+}

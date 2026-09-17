@@ -1,0 +1,7 @@
+node_modules/
+build/
+.react-router/
+.alchemy/
+.env*
+!.env.local.example
+!.env.example

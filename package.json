@@ -1,0 +1,27 @@
+{
+  "name": "walkwright",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "pnpm --recursive run build",
+    "format-check": "prettier --check .",
+    "knip": "knip",
+    "lint": "eslint --max-warnings=0 .",
+    "testwalk": "pnpm --dir packages/runtime run build && pnpm --dir packages/testbed run build && pnpm --dir packages/testbed run testwalk",
+    "typecheck": "pnpm --recursive run typecheck"
+  },
+  "devDependencies": {
+    "@changesets/cli": "3.0.3",
+    "@eslint/compat": "2.1.0",
+    "@eslint/js": "10.0.1",
+    "@types/node": "24.13.3",
+    "eslint": "10.8.1",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-import": "2.32.0",
+    "knip": "6.32.2",
+    "prettier": "3.9.6",
+    "prettier-plugin-pkg": "0.22.1",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.67.0"
+  }
+}

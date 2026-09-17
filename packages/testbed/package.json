@@ -1,0 +1,29 @@
+{
+  "name": "@walkwright/testbed",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "react-router build",
+    "dev": "react-router dev",
+    "preview": "sirv build/client --single --port 4173 --quiet",
+    "testwalk": "sirv build/client --single --port 4173 --quiet & server=$!; walkwright walk; status=$?; kill $server; exit $status",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "isbot": "^5",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-router": "8.3.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.1",
+    "@react-router/dev": "8.3.0",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.4",
+    "walkwright": "workspace:*",
+    "sirv-cli": "3.0.1",
+    "typescript": "5.9.3",
+    "vite": "8.2.1",
+    "zod": "4.4.3"
+  }
+}

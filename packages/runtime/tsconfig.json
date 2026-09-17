@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "include": ["src", "tsup.config.ts"],
+  "compilerOptions": {
+    "noEmit": true,
+    "tsBuildInfoFile": "build/.tsbuildinfo",
+    "lib": [
+      "es2024",
+      "ESNext.Array",
+      "ESNext.Collection",
+      "ESNext.Error",
+      "ESNext.Iterator",
+      "ESNext.Promise",
+      "dom",
+      "dom.iterable"
+    ]
+  }
+}
