@@ -11,6 +11,7 @@
     "typecheck": "pnpm --recursive run typecheck"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "1.0.1",
     "@changesets/cli": "3.0.3",
     "@eslint/compat": "2.1.0",
     "@eslint/js": "10.0.1",

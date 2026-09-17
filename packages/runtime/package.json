@@ -1,6 +1,6 @@
 {
   "name": "walkwright",
-  "version": "1.0.0-pre.13",
+  "version": "0.0.1",
   "type": "module",
   "description": "Walkwright runtime: walk your app with Playwright and record a browsable report",
   "repository": {
