@@ -318,16 +318,15 @@ export function pulse(text: string, intervalMs = 500): () => void {
 }
 
 export function wordmark(): string {
-  return bold(`${paint("accent", "MAP")}${paint("text", "WRIGHT")}`);
+  return bold(`${paint("accent", "WALK")}${paint("text", "WRIGHT")}`);
 }
 
 export function logo(): string[] {
   const mark = (value: string): string => paint("accent", value);
 
   return [
-    mark("   ┌─■─┐"),
-    `${mark("   ■   ■")}      ${wordmark()}`,
-    mark("      ┌┴┐"),
-    mark("      ■ ■"),
+    mark("     ■"),
+    `${mark("   ┌─┼─┐")}    ${wordmark()}`,
+    mark("   ■ ■ □"),
   ];
 }
