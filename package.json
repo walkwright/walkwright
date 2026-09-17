@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "build": "pnpm --recursive run build",
+    "bump": "GITHUB_TOKEN=$(gh auth token) changeset version",
     "format-check": "prettier --check .",
     "knip": "knip",
     "lint": "eslint --max-warnings=0 .",
+    "release": "changeset publish && git push --follow-tags",
     "testwalk": "pnpm --dir packages/runtime run build && pnpm --dir packages/testbed run build && pnpm --dir packages/testbed run testwalk",
     "typecheck": "pnpm --recursive run typecheck"
   },
